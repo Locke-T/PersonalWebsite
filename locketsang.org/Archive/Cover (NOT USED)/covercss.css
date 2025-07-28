@@ -1,0 +1,456 @@
+﻿/* Import Neuropol-like font (using Orbitron as alternative) */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+
+/*  neuropol font settings */
+@font-face{
+    font-family: 'Neuropol';
+    src: url('../public/fonts/neuropol.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Neuropol', 'Orbitron', monospace;
+    background: white;
+}
+
+/* ============================================ */
+/* COVER STYLES - Black intro with animation   */
+/* ============================================ */
+
+/* Cover container */
+#cover-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: block;
+}
+
+/* Cover halves */
+.cover-half {
+    height: 100%;
+    background: #050505;
+    position: relative;
+    transition: transform 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* Very subtle border */
+    border: 1px solid rgba(30, 30, 30, 0.3);
+    box-shadow: inset 0 0 100px rgba(10, 10, 10, 0.5);
+}
+
+#cover-left {
+    width: 100%;
+    clip-path: polygon(0 0, 100% 100%, 0 100%);
+    transform-origin: left center;
+    position: absolute;
+}
+
+#cover-right {
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    transform-origin: right center;
+    position: absolute;
+}
+
+/* Background space for future image */
+.background-space {
+    width: 100%;
+    height: 100%;
+    background: #050505;
+    position: relative;
+    /* Subtle organic line pattern */
+    background-image: 
+        /* Curved organic lines */
+        linear-gradient(23deg, transparent 0%, transparent 48%, rgba(20, 20, 20, 0.8) 49%, rgba(20, 20, 20, 0.8) 51%, transparent 52%, transparent 100%),
+        linear-gradient(67deg, transparent 0%, transparent 73%, rgba(15, 15, 15, 0.6) 74%, rgba(15, 15, 15, 0.6) 76%, transparent 77%, transparent 100%),
+        linear-gradient(156deg, transparent 0%, transparent 28%, rgba(25, 25, 25, 0.4) 29%, rgba(25, 25, 25, 0.4) 31%, transparent 32%, transparent 100%),
+        linear-gradient(89deg, transparent 0%, transparent 61%, rgba(18, 18, 18, 0.7) 62%, rgba(18, 18, 18, 0.7) 64%, transparent 65%, transparent 100%),
+        /* Very subtle neon hints */
+        linear-gradient(134deg, transparent 0%, transparent 83%, rgba(0, 40, 40, 0.1) 84%, rgba(0, 40, 40, 0.1) 86%, transparent 87%, transparent 100%),
+        linear-gradient(45deg, transparent 0%, transparent 91%, rgba(40, 0, 20, 0.05) 92%, rgba(40, 0, 20, 0.05) 94%, transparent 95%, transparent 100%);
+    background-size: 
+        380px 280px,
+        220px 420px,
+        150px 360px,
+        290px 180px,
+        450px 200px,
+        320px 480px;
+    background-position: 
+        20px 40px,
+        180px 120px,
+        90px 200px,
+        250px 60px,
+        50px 300px,
+        350px 15px;
+    animation: subtleDrift 15s ease-in-out infinite alternate;
+}
+
+/* Add subtle drift animation */
+@keyframes subtleDrift {
+    0% {
+        background-position: 
+            20px 40px,
+            180px 120px,
+            90px 200px,
+            250px 60px,
+            50px 300px,
+            350px 15px;
+    }
+    100% {
+        background-position: 
+            35px 55px,
+            195px 135px,
+            105px 215px,
+            265px 75px,
+            65px 315px,
+            365px 30px;
+    }
+}
+
+/* Add floating subtle nodes */
+.background-space::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    width: 2px;
+    height: 2px;
+    background: rgba(40, 40, 40, 0.6);
+    border-radius: 50%;
+    box-shadow: 
+        0 0 3px rgba(40, 40, 40, 0.4),
+        200px 100px 0 rgba(50, 50, 50, 0.3),
+        -150px 200px 0 rgba(45, 45, 45, 0.25),
+        300px -50px 0 rgba(35, 35, 35, 0.4),
+        500px 150px 0 rgba(30, 30, 30, 0.2),
+        -200px -100px 0 rgba(55, 55, 55, 0.15);
+    animation: subtleNodePulse 6s ease-in-out infinite alternate;
+}
+
+.background-space::after {
+    content: '';
+    position: absolute;
+    top: 60%;
+    right: 20%;
+    width: 1px;
+    height: 1px;
+    background: rgba(60, 60, 60, 0.4);
+    border-radius: 50%;
+    box-shadow: 
+        0 0 2px rgba(60, 60, 60, 0.2),
+        -180px -80px 0 rgba(45, 45, 45, 0.3),
+        120px -150px 0 rgba(50, 50, 50, 0.25),
+        -250px 100px 0 rgba(40, 40, 40, 0.2),
+        400px 50px 0 rgba(35, 35, 35, 0.15);
+    animation: subtleNodePulse 8s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes subtleNodePulse {
+    0% { 
+        opacity: 0.2; 
+        transform: scale(1);
+    }
+    100% { 
+        opacity: 0.5; 
+        transform: scale(1.1);
+    }
+}
+
+/* Floating particle effects */
+.cover-half::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        /* Small particles */
+        radial-gradient(circle at 10% 20%, rgba(0, 255, 255, 0.4) 1px, transparent 2px),
+        radial-gradient(circle at 80% 80%, rgba(255, 0, 128, 0.3) 1px, transparent 2px),
+        radial-gradient(circle at 40% 40%, rgba(0, 255, 255, 0.2) 1px, transparent 2px),
+        radial-gradient(circle at 90% 10%, rgba(255, 0, 128, 0.3) 1px, transparent 2px),
+        radial-gradient(circle at 20% 90%, rgba(0, 255, 255, 0.25) 1px, transparent 2px),
+        radial-gradient(circle at 60% 30%, rgba(255, 0, 128, 0.2) 1px, transparent 2px),
+        radial-gradient(circle at 30% 70%, rgba(0, 255, 255, 0.3) 1px, transparent 2px),
+        radial-gradient(circle at 70% 60%, rgba(255, 0, 128, 0.25) 1px, transparent 2px),
+        /* Additional floating particles */
+        radial-gradient(circle at 5% 50%, rgba(60, 60, 60, 0.15) 0.5px, transparent 1px),
+        radial-gradient(circle at 95% 35%, rgba(50, 50, 50, 0.2) 0.5px, transparent 1px),
+        radial-gradient(circle at 25% 15%, rgba(70, 70, 70, 0.1) 0.5px, transparent 1px),
+        radial-gradient(circle at 75% 85%, rgba(45, 45, 45, 0.18) 0.5px, transparent 1px),
+        radial-gradient(circle at 50% 75%, rgba(55, 55, 55, 0.12) 0.5px, transparent 1px),
+        radial-gradient(circle at 85% 65%, rgba(40, 40, 40, 0.16) 0.5px, transparent 1px);
+    background-size: 
+        300px 300px,
+        250px 250px,
+        400px 400px,
+        200px 200px,
+        350px 350px,
+        180px 180px,
+        320px 320px,
+        280px 280px,
+        160px 160px,
+        220px 220px,
+        140px 140px,
+        260px 260px,
+        190px 190px,
+        170px 170px;
+    animation: particleFloat 12s linear infinite;
+    pointer-events: none;
+}
+
+.cover-half::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        /* Medium particles */
+        radial-gradient(circle at 15% 15%, rgba(0, 255, 255, 0.15) 2px, transparent 3px),
+        radial-gradient(circle at 85% 25%, rgba(255, 0, 128, 0.12) 2px, transparent 3px),
+        radial-gradient(circle at 25% 85%, rgba(0, 255, 255, 0.18) 2px, transparent 3px),
+        radial-gradient(circle at 75% 75%, rgba(255, 0, 128, 0.14) 2px, transparent 3px),
+        radial-gradient(circle at 45% 55%, rgba(0, 255, 255, 0.16) 2px, transparent 3px),
+        radial-gradient(circle at 65% 35%, rgba(255, 0, 128, 0.13) 2px, transparent 3px),
+        /* More floating particles */
+        radial-gradient(circle at 12% 45%, rgba(65, 65, 65, 0.08) 1px, transparent 2px),
+        radial-gradient(circle at 88% 55%, rgba(35, 35, 35, 0.12) 1px, transparent 2px),
+        radial-gradient(circle at 35% 25%, rgba(75, 75, 75, 0.06) 1px, transparent 2px),
+        radial-gradient(circle at 65% 75%, rgba(50, 50, 50, 0.1) 1px, transparent 2px),
+        radial-gradient(circle at 22% 65%, rgba(45, 45, 45, 0.09) 1px, transparent 2px),
+        radial-gradient(circle at 78% 25%, rgba(60, 60, 60, 0.07) 1px, transparent 2px),
+        radial-gradient(circle at 52% 85%, rgba(40, 40, 40, 0.11) 1px, transparent 2px);
+    background-size: 
+        450px 450px,
+        380px 380px,
+        500px 500px,
+        320px 320px,
+        420px 420px,
+        360px 360px,
+        240px 240px,
+        290px 290px,
+        200px 200px,
+        340px 340px,
+        180px 180px,
+        270px 270px,
+        310px 310px;
+    animation: particleFloat 18s linear infinite reverse;
+    pointer-events: none;
+}
+
+@keyframes particleFloat {
+    0% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+        opacity: 0.3;
+    }
+    25% {
+        opacity: 0.6;
+    }
+    50% {
+        transform: translateY(-20px) translateX(10px) rotate(90deg);
+        opacity: 0.8;
+    }
+    75% {
+        opacity: 0.4;
+    }
+    100% {
+        transform: translateY(-40px) translateX(-5px) rotate(180deg);
+        opacity: 0.2;
+    }
+}
+
+/* Center content */
+.center-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 15;
+    text-align: center;
+    transition: opacity 0.8s ease-out;
+}
+
+/* Add particle field behind center content */
+.center-content::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    left: -200px;
+    right: -200px;
+    bottom: -200px;
+    background-image: 
+        /* More spontaneous particles */
+        radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.6) 0.5px, transparent 1px),
+        radial-gradient(circle at 80% 20%, rgba(0, 255, 255, 0.4) 0.5px, transparent 1px),
+        radial-gradient(circle at 40% 80%, rgba(255, 0, 128, 0.3) 0.5px, transparent 1px),
+        radial-gradient(circle at 90% 90%, rgba(255, 255, 255, 0.3) 0.5px, transparent 1px),
+        radial-gradient(circle at 10% 70%, rgba(0, 255, 255, 0.25) 0.5px, transparent 1px),
+        radial-gradient(circle at 70% 10%, rgba(255, 0, 128, 0.3) 0.5px, transparent 1px),
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.2) 0.5px, transparent 1px),
+        radial-gradient(circle at 30% 40%, rgba(0, 255, 255, 0.2) 0.5px, transparent 1px),
+        radial-gradient(circle at 60% 70%, rgba(255, 0, 128, 0.25) 0.5px, transparent 1px),
+        radial-gradient(circle at 15% 45%, rgba(255, 255, 255, 0.4) 0.5px, transparent 1px),
+        radial-gradient(circle at 85% 35%, rgba(0, 255, 255, 0.3) 0.5px, transparent 1px),
+        radial-gradient(circle at 35% 15%, rgba(255, 0, 128, 0.2) 0.5px, transparent 1px);
+    background-size: 
+        100px 100px,
+        80px 80px,
+        120px 120px,
+        90px 90px,
+        110px 110px,
+        75px 75px,
+        95px 95px,
+        85px 85px,
+        105px 105px,
+        70px 70px,
+        115px 115px,
+        125px 125px;
+    animation: gentleFloat 10s ease-in-out infinite alternate;
+    z-index: -1;
+    pointer-events: none;
+}
+
+@keyframes gentleFloat {
+    0% {
+        transform: translateY(0px) translateX(0px);
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(-15px) translateX(5px);
+        opacity: 0.4;
+    }
+}
+
+/* Name title */
+.name-title {
+    font-family: 'Neuropol', 'Orbitron', monospace;
+    font-size: 3.5rem;
+    font-weight: normal;
+    color: #00ffff;
+    text-shadow: 
+        0 0 5px #00ffff,
+        0 0 10px #00ffff,
+        0 0 15px #00ffff;
+    margin-bottom: 2rem;
+    letter-spacing: 0.1em;
+    animation: nameGlow 2s ease-in-out infinite alternate;
+}
+
+/* Button styling */
+.dive-button {
+    font-family: 'Neuropol', 'Orbitron', monospace;
+    font-size: 1.5rem;
+    font-weight: normal;
+    padding: 1rem 3rem;
+    background: transparent;
+    border: 3px solid #ff0080;
+    color: #ff0080;
+    cursor: pointer;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease;
+    box-shadow: 
+        0 0 20px #ff0080,
+        inset 0 0 20px rgba(255, 0, 128, 0.1);
+    animation: buttonPulse 2s ease-in-out infinite alternate;
+}
+
+.dive-button:hover {
+    background: rgba(255, 0, 128, 0.1);
+    transform: scale(1.05);
+    box-shadow: 
+        0 0 30px #ff0080,
+        0 0 50px #ff0080,
+        inset 0 0 30px rgba(255, 0, 128, 0.2);
+}
+
+.dive-button:active {
+    transform: scale(0.98);
+}
+
+/* Cover Animations */
+@keyframes nameGlow {
+    from {
+        text-shadow: 
+            0 0 5px #00ffff,
+            0 0 10px #00ffff,
+            0 0 15px #00ffff;
+    }
+    to {
+        text-shadow: 
+            0 0 8px #00ffff,
+            0 0 15px #00ffff,
+            0 0 20px #00ffff;
+    }
+}
+
+@keyframes buttonPulse {
+    from {
+        box-shadow: 
+            0 0 20px #ff0080,
+            inset 0 0 20px rgba(255, 0, 128, 0.1);
+    }
+    to {
+        box-shadow: 
+            0 0 30px #ff0080,
+            0 0 40px #ff0080,
+            inset 0 0 30px rgba(255, 0, 128, 0.2);
+    }
+}
+
+/* Split animation classes */
+.split-left {
+    transform: translateX(-100%);
+    clip-path: polygon(0 0, 100% 100%, 0 100%);
+}
+
+.split-right {
+    transform: translateX(100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+/* Cover Responsive design */
+@media (max-width: 768px) {
+    .name-title {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .dive-button {
+        font-size: 1.2rem;
+        padding: 0.8rem 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .name-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .dive-button {
+        font-size: 1rem;
+        padding: 0.6rem 1.5rem;
+    }
+}
