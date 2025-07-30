@@ -1,0 +1,445 @@
+/* Import Neuropol font */
+@font-face{
+    font-family: 'Neuropol';
+    src: url('../public/fonts/neuropol.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+    color: black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: 1000;
+    padding: 18px 0;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.navbar.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Remove all hover effects on navbar */
+/* .navbar:hover - REMOVED */
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: auto;
+}
+
+.nav-logo {
+    width: 32px;
+    height: 32px;
+    background-color: #808080;
+    border-radius: 4px;
+    object-fit: contain;
+}
+
+.website-name {
+    color: white;
+    font-family: 'Neuropol', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    margin-left: 0px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 60px;
+    margin-left: 100px;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    color: white;
+    font-family: 'Neuropol', Arial, sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: normal;
+    padding: 10px 0;
+    transition: color 0.1s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-link:hover {
+    color: #ff6b6b;
+    transform: scale(1.2);
+}
+
+.nav-link.active {
+    color: #ff6b6b;
+}
+
+/* Ensure active state only applies when it's the current page */
+.nav-link.active:not(:hover) {
+    color: #ff6b6b;
+}
+
+.nav-link.active:hover {
+    color: #ff6b6b;
+}
+
+/* When mouse leaves active link, return to active state */
+.nav-link.active:not(:hover):not(:active) {
+    color: #ff6b6b;
+}
+
+/* Hero section with background */
+.hero-section {
+    position: relative;
+    height: 76vh;
+    background-color: #000;
+    background-image: url('public/images/Hero.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Add space for fixed navbar */
+main {
+    margin-top: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Download button section */
+.download-section {
+    background-color: #f5f6f8;
+    padding: 15px 20px;
+    text-align: center;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.download-container {
+    max-width: 200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.download-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #4a90e2;
+    color: white;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    border: 1px solid #357abd;
+    box-shadow: 0 2px 6px rgba(74, 144, 226, 0.2);
+}
+
+.download-btn:hover {
+    background-color: #357abd;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+}
+
+.download-icon {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.download-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.download-title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* Resume content section */
+.resume-content-section {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+
+.resume-container {
+    max-width: 100%;
+    margin: 0;
+    padding: 0 20px;
+}
+
+.resume-image-viewer {
+    background-color: #f8f9fa;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: hidden;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resume-image {
+    width: 100%;
+    max-width: 1400px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Contact section */
+.contact-section {
+    background-color: #f5f5f5;
+    padding: 30px 20px;
+    border-top: 1px solid #ddd;
+}
+
+.contact-container {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contact-icon {
+    font-size: 40px;
+}
+
+.linkedin-link .contact-icon {
+    color: #0077b5;
+}
+
+.github-link .contact-icon {
+    color: #24292e;
+}
+
+.contact-text {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.linkedin-link .contact-text {
+    color: #0077b5;
+}
+
+.github-link .contact-text {
+    color: #24292e;
+}
+
+.contact-link:hover .contact-text {
+    text-decoration: underline;
+}
+
+.contact-link:hover .linkedin-link .contact-icon {
+    color: #005885;
+}
+
+.contact-link:hover .github-link .contact-icon {
+    color: #1b1f23;
+}
+
+/* Copyright section */
+.copyright-section {
+    background-color: #1a1a1a;
+    padding: 20px;
+    text-align: center;
+}
+
+.copyright-section p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #cccccc;
+    font-size: 0.9rem;
+}
+
+/* Mobile Navigation */
+.mobile-navbar {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 1001;
+    padding: 15px 0;
+    backdrop-filter: blur(10px);
+}
+
+.mobile-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.mobile-nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mobile-nav-logo {
+    width: 28px;
+    height: 28px;
+    background-color: #808080;
+    border-radius: 4px;
+    object-fit: contain;
+}
+
+.mobile-website-name {
+    color: white;
+    font-family: 'Neuropol', Arial, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+.mobile-menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.mobile-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-menu-list {
+    list-style: none;
+    padding: 20px 0;
+    margin: 0;
+}
+
+.mobile-menu-item {
+    margin: 0;
+}
+
+.mobile-menu-link {
+    display: block;
+    color: white;
+    font-family: 'Neuropol', Arial, sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 15px 30px;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.mobile-menu-link:hover,
+.mobile-menu-link.active {
+    background-color: rgba(255, 107, 107, 0.1);
+    border-left-color: #ff6b6b;
+    color: #ff6b6b;
+}
+
+/* Media Queries */
+@media screen and (max-width: 980px) {
+    .navbar {
+        display: none !important;
+    }
+    
+    .mobile-navbar {
+        display: block;
+    }
+}
