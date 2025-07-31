@@ -1,0 +1,40 @@
+[30-Jul-2025 19:55:27 UTC] PHP Warning:  Undefined array key "message" in /home/lockucpv/public_html/Contact/mail.php on line 10
+[30-Jul-2025 19:55:27 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/lockucpv/public_html/Contact/mail.php on line 10
+[30-Jul-2025 19:55:29 UTC] PHP Warning:  Undefined array key "name" in /home/lockucpv/public_html/Contact/mail.php on line 7
+[30-Jul-2025 19:55:29 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/lockucpv/public_html/Contact/mail.php on line 7
+[30-Jul-2025 19:55:29 UTC] PHP Warning:  Undefined array key "email" in /home/lockucpv/public_html/Contact/mail.php on line 8
+[30-Jul-2025 19:55:29 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/lockucpv/public_html/Contact/mail.php on line 8
+[30-Jul-2025 19:55:29 UTC] PHP Warning:  Undefined array key "subject" in /home/lockucpv/public_html/Contact/mail.php on line 9
+[30-Jul-2025 19:55:29 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/lockucpv/public_html/Contact/mail.php on line 9
+[30-Jul-2025 19:55:29 UTC] PHP Warning:  Undefined array key "message" in /home/lockucpv/public_html/Contact/mail.php on line 10
+[30-Jul-2025 19:55:29 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/lockucpv/public_html/Contact/mail.php on line 10
+[30-Jul-2025 19:55:30 UTC] PHP Warning:  Undefined array key "message" in /home/lockucpv/public_html/Contact/mail.php on line 10
+[30-Jul-2025 19:55:30 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/lockucpv/public_html/Contact/mail.php on line 10
+[30-Jul-2025 19:55:32 UTC] PHP Warning:  Undefined array key "name" in /home/lockucpv/public_html/Contact/mail.php on line 7
+[30-Jul-2025 19:55:32 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/lockucpv/public_html/Contact/mail.php on line 7
+[30-Jul-2025 19:55:32 UTC] PHP Warning:  Undefined array key "email" in /home/lockucpv/public_html/Contact/mail.php on line 8
+[30-Jul-2025 19:55:32 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/lockucpv/public_html/Contact/mail.php on line 8
+[30-Jul-2025 19:55:32 UTC] PHP Warning:  Undefined array key "subject" in /home/lockucpv/public_html/Contact/mail.php on line 9
+[30-Jul-2025 19:55:32 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/lockucpv/public_html/Contact/mail.php on line 9
+[30-Jul-2025 19:55:32 UTC] PHP Warning:  Undefined array key "message" in /home/lockucpv/public_html/Contact/mail.php on line 10
+[30-Jul-2025 19:55:32 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/lockucpv/public_html/Contact/mail.php on line 10
+[31-Jul-2025 04:53:38 UTC] PHP Warning:  Undefined array key "message" in /home/lockucpv/public_html/Contact/mail.php on line 10
+[31-Jul-2025 04:53:38 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/lockucpv/public_html/Contact/mail.php on line 10
+[31-Jul-2025 04:53:41 UTC] PHP Warning:  Undefined array key "name" in /home/lockucpv/public_html/Contact/mail.php on line 7
+[31-Jul-2025 04:53:41 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/lockucpv/public_html/Contact/mail.php on line 7
+[31-Jul-2025 04:53:41 UTC] PHP Warning:  Undefined array key "email" in /home/lockucpv/public_html/Contact/mail.php on line 8
+[31-Jul-2025 04:53:41 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/lockucpv/public_html/Contact/mail.php on line 8
+[31-Jul-2025 04:53:41 UTC] PHP Warning:  Undefined array key "subject" in /home/lockucpv/public_html/Contact/mail.php on line 9
+[31-Jul-2025 04:53:41 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/lockucpv/public_html/Contact/mail.php on line 9
+[31-Jul-2025 04:53:41 UTC] PHP Warning:  Undefined array key "message" in /home/lockucpv/public_html/Contact/mail.php on line 10
+[31-Jul-2025 04:53:41 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/lockucpv/public_html/Contact/mail.php on line 10
+[31-Jul-2025 04:53:43 UTC] PHP Warning:  Undefined array key "message" in /home/lockucpv/public_html/Contact/mail.php on line 10
+[31-Jul-2025 04:53:43 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/lockucpv/public_html/Contact/mail.php on line 10
+[31-Jul-2025 04:53:45 UTC] PHP Warning:  Undefined array key "name" in /home/lockucpv/public_html/Contact/mail.php on line 7
+[31-Jul-2025 04:53:45 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/lockucpv/public_html/Contact/mail.php on line 7
+[31-Jul-2025 04:53:45 UTC] PHP Warning:  Undefined array key "email" in /home/lockucpv/public_html/Contact/mail.php on line 8
+[31-Jul-2025 04:53:45 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/lockucpv/public_html/Contact/mail.php on line 8
+[31-Jul-2025 04:53:45 UTC] PHP Warning:  Undefined array key "subject" in /home/lockucpv/public_html/Contact/mail.php on line 9
+[31-Jul-2025 04:53:45 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/lockucpv/public_html/Contact/mail.php on line 9
+[31-Jul-2025 04:53:45 UTC] PHP Warning:  Undefined array key "message" in /home/lockucpv/public_html/Contact/mail.php on line 10
+[31-Jul-2025 04:53:45 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/lockucpv/public_html/Contact/mail.php on line 10
